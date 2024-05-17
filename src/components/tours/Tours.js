@@ -1,16 +1,13 @@
 import data from "../../data/db.json"
+import Tour from "../tours/tour/Tour"
+
 function Tours() {
+    const tour = data;
     return (
         <>
-        {data.map(result => {
-            return(
-            <div>
-            <img src={result.image}/>
-            <h1>
-                {result.name}
-            </h1>
-            </div>)
-        })}
+        <div>
+       <Tour tour={data} />
+       </div>
         </>
     )
 }
